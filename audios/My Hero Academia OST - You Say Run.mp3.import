@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/My Hero Academia OST - You Say Run.mp3-1d12f6fca03f44375735f53af1cbf845.mp3str"
+
+[deps]
+
+source_file="res://audios/My Hero Academia OST - You Say Run.mp3"
+dest_files=[ "res://.import/My Hero Academia OST - You Say Run.mp3-1d12f6fca03f44375735f53af1cbf845.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

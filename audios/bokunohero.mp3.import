@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bokunohero.mp3-16a59f37e2e4fe5707c9a05f9a41d25d.mp3str"
+
+[deps]
+
+source_file="res://audios/bokunohero.mp3"
+dest_files=[ "res://.import/bokunohero.mp3-16a59f37e2e4fe5707c9a05f9a41d25d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
