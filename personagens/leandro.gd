@@ -21,9 +21,17 @@ var vida = 200
 
 const pneu_cena = preload("res://personagens/pneu.tscn")
 	
+func _ready():
+	$tocador.stream.loop = false
+	$tocador.volume_db = (Global.volume_efeitos - 20)
+	
 func _process(_delta):
 	
 	if(vida < 1):
+		
+		if movimentoIndex == 4:
+			get_tree().root.remove_child(pneu)
+			
 		mov.x =  (-VELOCIDADE * .75)  +contador
 		mov.y = (-FORCA_PULO * 1.5) +contador
 		contador += GRAVIDADE
@@ -85,17 +93,14 @@ func pular():
 		mov.x = VELOCIDADE
 		
 	if is_on_floor():
-			#print("a")
 		if contador == 1:
-			#print("b")
 			contador=0
-			mov.x = 0 
+			mov.x = 0
+			$tocador.play()
 			mudarMovimento()
 			direcao = novaDirecao()
-			#mov.y = 0
 		else:
 			$animacoes.play("pulando")
-			#print("c")
 			print("oi")
 			mov.y  = -FORCA_PULO
 			contador= 1

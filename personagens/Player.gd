@@ -16,6 +16,10 @@ var isAgindo = false # so pra test
 var movimento = 1
 
 func _ready():
+	$tiro.stream.loop = false
+	$tiro.volume_db = (Global.volume_efeitos - 20)
+	$oi.stream.loop = false
+	$oi.volume_db = (Global.volume_efeitos - 20)
 	$AnimatedSprite.play("parado")
 
 func _process(_delta):
@@ -86,6 +90,8 @@ func _process(_delta):
 		
 
 func atirar():
+
+	$tiro.play()
 	var obj_disparo  = cena_disparo.instance()	
 	obj_disparo.global_position = $Position2D.global_position
 	Global.balas_tela += 1
@@ -94,6 +100,7 @@ func atirar():
 
 func dano(dano):
 	#incrementar isso aqui
+	$oi.play()
 	Global.vida_jogador -= dano
 	print("vida ", Global.vida_jogador)
 

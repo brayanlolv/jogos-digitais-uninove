@@ -1,7 +1,7 @@
 extends Node2D
 
 
-#musica vai do -40 ao -10, padrao -20
+var Boss = preload("res://personagens/Leandro.tscn")
 
 
 func _ready():
@@ -17,6 +17,9 @@ func _process(_delta):
 		get_tree().change_scene("res://telas/configuracoes.tscn")
 
 
-
-func _on_mamaco3_body_entered(body):
+func _on_Area2D_body_entered(body):
+	if body.name == 'Player':
+		var boss = Boss.instance()	
+		boss.global_position = $boss/bossposicao.global_position
+		get_tree().root.add_child(boss)
 	pass # Replace with function body.

@@ -1,9 +1,11 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://personagens/Player.gd" type="Script" id=1]
 [ext_resource path="res://personagens/assets/Kid Chameleonpng (1).png" type="Texture" id=2]
 [ext_resource path="res://personagens/tiro.tscn" type="PackedScene" id=3]
 [ext_resource path="res://personagens/assets/cara do enio.png" type="Texture" id=4]
+[ext_resource path="res://audios/oi.mp3" type="AudioStream" id=5]
+[ext_resource path="res://audios/parafusadeira.mp3" type="AudioStream" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 22.0
@@ -169,7 +171,7 @@ scale = Vector2( 2.78141, 2.07076 )
 z_index = 4
 frames = SubResource( 12 )
 animation = "rastejando"
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( -2, -3 )
 
@@ -177,6 +179,14 @@ offset = Vector2( -2, -3 )
 current = true
 
 [node name="Position2D" type="Position2D" parent="Player"]
+
+[node name="oi" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2( -1, 2 )
+stream = ExtResource( 5 )
+
+[node name="tiro" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2( -1, 2 )
+stream = ExtResource( 6 )
 
 [node name="Node2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 216, -63 )

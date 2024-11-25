@@ -2,6 +2,7 @@
 
 [ext_resource path="res://personagens/leandro.gd" type="Script" id=1]
 [ext_resource path="res://personagens/assets/guts.png" type="Texture" id=2]
+[ext_resource path="res://audios/perc03-44836.mp3" type="AudioStream" id=3]
 
 [sub_resource type="CapsuleShape2D" id=31]
 radius = 22.0
@@ -60,9 +61,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=33]
-extents = Vector2( 969.5, 10 )
-
 [node name="Leandro" type="Node2D"]
 position = Vector2( 1430, -343 )
 
@@ -82,15 +80,13 @@ scale = Vector2( 3.25945, 3.16478 )
 z_index = 4
 frames = SubResource( 32 )
 animation = "parado"
+frame = 1
 playing = true
 offset = Vector2( -2, -3 )
 
 [node name="shot" type="Position2D" parent="Leandro"]
 position = Vector2( -3, -99 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( -234, 716 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -134, 249 )
-shape = SubResource( 33 )
+[node name="tocador" type="AudioStreamPlayer2D" parent="Leandro"]
+position = Vector2( 217, -63 )
+stream = ExtResource( 3 )

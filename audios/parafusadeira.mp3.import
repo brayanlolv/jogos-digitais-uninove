@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/parafusadeira.mp3-5918a1284434414e1a27a5574926d539.mp3str"
+
+[deps]
+
+source_file="res://audios/parafusadeira.mp3"
+dest_files=[ "res://.import/parafusadeira.mp3-5918a1284434414e1a27a5574926d539.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
