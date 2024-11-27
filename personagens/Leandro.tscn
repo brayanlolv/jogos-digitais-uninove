@@ -80,7 +80,6 @@ scale = Vector2( 3.25945, 3.16478 )
 z_index = 4
 frames = SubResource( 32 )
 animation = "parado"
-frame = 1
 playing = true
 offset = Vector2( -2, -3 )
 

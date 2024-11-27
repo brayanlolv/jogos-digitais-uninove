@@ -39,3 +39,12 @@ script = ExtResource( 3 )
 margin_right = 40.0
 margin_bottom = 14.0
 text = " 3"
+
+[node name="Menu" type="Button" parent="Control"]
+margin_left = 896.0
+margin_top = 28.0
+margin_right = 974.0
+margin_bottom = 48.0
+text = "opções"
+
+[connection signal="pressed" from="Control/Menu" to="Control" method="_on_Menu_pressed"]

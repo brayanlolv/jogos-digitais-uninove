@@ -18,7 +18,7 @@ var direcao = true
 var pegouPneu = false
 var movimentoIndex = 1
 var vida = 200
-
+var time = 0
 const pneu_cena = preload("res://personagens/pneu.tscn")
 	
 func _ready():
@@ -31,7 +31,12 @@ func _process(_delta):
 		
 		if movimentoIndex == 4:
 			get_tree().root.remove_child(pneu)
-			
+
+		if time > 3:
+			get_tree().change_scene("res://telas/vitoria.tscn")
+			queue_free()
+		else: 
+			time += _delta
 		mov.x =  (-VELOCIDADE * .75)  +contador
 		mov.y = (-FORCA_PULO * 1.5) +contador
 		contador += GRAVIDADE

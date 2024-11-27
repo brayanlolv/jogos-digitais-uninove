@@ -40,7 +40,7 @@ func _process(_delta):
 			$AnimatedSprite.play("rastejando")		
 			
 			#$AnimatedSprite.rotation_degrees += 8
-		
+		move_and_slide(mov, Vector2(0,-1))
 		return 
 	
 	
@@ -61,7 +61,7 @@ func _process(_delta):
 		
 		
 		
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if (Input.is_action_just_pressed("ui_accept")  or Input.is_action_just_pressed("ui_up"))  and is_on_floor():
 		mov.y = - FORCA_PULO 
 		pulando = true
 		

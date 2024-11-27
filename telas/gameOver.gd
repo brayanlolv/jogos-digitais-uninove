@@ -17,3 +17,5 @@ func _on_desisitr_pressed():
 func _on_Menu_pressed():
 	get_tree().change_scene("res://telas/inicial.tscn")
 
+
+

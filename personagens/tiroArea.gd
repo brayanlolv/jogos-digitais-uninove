@@ -26,6 +26,6 @@ func _process(_delta):
 
 
 func _on_Area2D_body_entered(body):
-	if body.has_method("dano"):
+	if body.has_method("dano") and   body.name != 'Player':
 		body.dano(DANO)
 	pass # Replace with function body.

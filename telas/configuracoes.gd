@@ -11,12 +11,12 @@ func _on_ok_pressed():
 
 
 func _on_VolumeMusica_drag_ended(value_changed):
-	Global.volume_musica = $VolumeMusica.value
+	Global.volume_musica = $VBoxContainer/VolumeMusica.value
 
 
 
 func _on_VolumeEfeitos_drag_ended(value_changed):
-	Global.volume_efeitos = $VolumeEfeitos.value
+	Global.volume_efeitos = $VBoxContainer/VolumeEfeitos.value
 
 
 

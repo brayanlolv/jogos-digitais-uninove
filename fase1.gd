@@ -9,6 +9,7 @@ func _ready():
 	Global.vida_jogador = 100
 	
 	$MusicaFase.volume_db = (Global.volume_musica - 40)
+	
 	pass # Replace with function body.
 
 
